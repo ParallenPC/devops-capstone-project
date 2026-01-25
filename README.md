@@ -1,5 +1,15 @@
-# DevOps Capstone Template
+# Devops-capstone-project
 
+## Project Description
+
+The **DevOps Capstone Project** demonstrates the end-to-end implementation of modern DevOps practices for building, testing, deploying, and operating an application in a production-like environment. The project integrates source control, continuous integration, continuous delivery/deployment (CI/CD), infrastructure as code, containerization, and monitoring to deliver a reliable and scalable solution.
+
+This capstone showcases:
+- Version control and collaboration using Git and GitHub  
+- Automated CI/CD pipelines  
+- Containerization and orchestration  
+- Cloud-native deployment and infrastructure management  
+- Monitoring, logging, and operational best practices  
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-green.svg)](https://shields.io/)
 
