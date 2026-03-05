@@ -122,11 +122,11 @@ def update_account(account_id):
 ######################################################################
 
 @app.route('/accounts/<int:account_id>', methods = ["DELETE"])
-def update_account(account_id):
+def delete_account(account_id):
 
     """
-    Update an Account
-    This endpoint will update an Account based on the posted data
+    Delete an Account
+    This endpoint will delete an Account based on the posted data
     """
     app.logger.info("Request to delete an Account with id: %s", account_id)
 
