@@ -97,7 +97,7 @@ def read_account(account_id):
 # UPDATE AN EXISTING ACCOUNT
 ######################################################################
 
-@app.route('/accounts/<account:account_id>', methods = ["PUT"])
+@app.route('/accounts/<int:account_id>', methods = ["PUT"])
 def update_account(account_id):
 
     """
