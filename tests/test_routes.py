@@ -152,3 +152,29 @@ class TestAccountService(TestCase):
         
         for account in account:
             self.assertEqual(account.name, [a["name"] for a in data])
+
+    def test_update_account(self):
+
+        # create an Account
+
+        test_account = AccountFactory()
+        resp = self.client.post(BASE_URL, json=test_account.serialize())
+        self.assertEqual(resp.status_code, status.HTTP_201_CREATED)
+
+        new_account = resp.get_json()
+        new_account["name"] = "HIII"
+        
+        resp = self.client.put(f"{BASE_URL}/{new_account['id']}", json=new_account)
+
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        updated_account = resp.get_json()
+        self.assertEqual(updated_account["name"], "HIII")
+    
+    def test_delete_account(self):
+
+        # create an Account
+
+        test_account = self._create_accounts(1)[0]
+        resp = self.client.delete(f"{BASE_URL}/{test_account['id']}")
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+
