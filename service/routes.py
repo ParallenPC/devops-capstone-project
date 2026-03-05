@@ -62,12 +62,13 @@ def create_accounts():
 ######################################################################
 
 # ... place you code here to LIST accounts ...
-@app.route('/accounts',  methods=["POST"])
+@app.route('/accounts',  methods=["GET"])
 def list_all_account():
     """List All Account"""
     
-    accounts = Account.all()
+   
     app.logger.info("Request to list Accounts")
+    accounts = Account.all()
     
     account_list = [account.serialize() for account in accounts]
 
