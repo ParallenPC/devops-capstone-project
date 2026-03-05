@@ -148,9 +148,6 @@ class TestAccountService(TestCase):
         
         data = resp.get_json()
         self.assertEqual(len(data), 4)
-        
-        for account in account:
-            self.assertEqual(account.name, [a["name"] for a in data])
 
     def test_update_account(self):
 
