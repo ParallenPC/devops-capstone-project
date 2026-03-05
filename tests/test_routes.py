@@ -143,8 +143,7 @@ class TestAccountService(TestCase):
         """It should Read a all Account"""
         account = self._create_accounts(4)
         resp = self.client.get(
-            f"{BASE_URL}", content_type="application/json"
-        )
+            f"{BASE_URL}")
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
         
         data = resp.get_json()
@@ -155,7 +154,7 @@ class TestAccountService(TestCase):
 
     def test_update_account(self):
 
-        # create an Account
+        # Update an Account
 
         test_account = AccountFactory()
         resp = self.client.post(BASE_URL, json=test_account.serialize())
@@ -172,9 +171,9 @@ class TestAccountService(TestCase):
     
     def test_delete_account(self):
 
-        # create an Account
+        # Delete an Account
 
-        test_account = self._create_accounts(1)[0]
-        resp = self.client.delete(f"{BASE_URL}/{test_account['id']}")
+        account = self._create_accounts(1)[0]
+        resp = self.client.delete(f"{BASE_URL}/{account.id}")
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
 
