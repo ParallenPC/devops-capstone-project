@@ -1,4 +1,5 @@
 # Devops-capstone-project
+![Build Status](https://github.com/ParallenPc/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
 
 ## Project Description
 
